@@ -2,24 +2,24 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-o@!9-g32^w)wmd=_#qalp5tdq4#29ke@+85sv0ar8w19df00iv'
-
+SECRET_KEY = 'django-insecure-=izcm-p@2b2$u7w5fwovwn(5izw$*ipcwt%q-12(p9#7y-eb4p'
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
-    'main.apps.MainConfig',
+    'forum.apps.ForumConfig',
+    'courses.apps.CoursesConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +51,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
+
 
 DATABASES = {
     'default': {
